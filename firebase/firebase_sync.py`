@@ -1,0 +1,10 @@
+import requests, datetime
+
+def log_to_firebase(agent, action, amount):
+    payload = {
+        "agent": agent,
+        "action": action,
+        "amount": amount,
+        "timestamp": datetime.datetime.now().isoformat()
+    }
+    requests.post("https://your-firebase-db.firebaseio.com/logs.json", json=payload)
