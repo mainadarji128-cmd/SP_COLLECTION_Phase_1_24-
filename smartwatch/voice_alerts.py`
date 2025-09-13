@@ -1,0 +1,5 @@
+def voice_alert(status, agent, action):
+    if status == "Lah":
+        return f"Sanam daju, {agent} triggered {action}. Vault routed. Clone defense active."
+    else:
+        return "Standing by. No new alerts."
